@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on DailyPyTips</title><link>https://dailypytips.com/posts/</link><description>Recent content in Posts on DailyPyTips</description><generator>Hugo -- 0.160.1</generator><language>en-us</language><lastBuildDate>Thu, 23 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://dailypytips.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Day 2: Variables Don't Store Values (Python Memory Model)</title><link>https://dailypytips.com/posts/day2/</link><pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate><guid>https://dailypytips.com/posts/day2/</guid><description>&lt;blockquote&gt;
-&lt;p&gt;If you think &lt;code&gt;x = 10&lt;/code&gt; means &amp;ldquo;x stores 10&amp;rdquo;&amp;hellip;&lt;br&gt;
+&lt;p&gt;If you think &lt;code&gt;x = 10&lt;/code&gt; means &amp;ldquo;x stores 10&amp;rdquo;&amp;hellip;
 you are already misunderstanding Python.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Today, we fix that.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id="todays-goal"&gt;Today&amp;rsquo;s Goal&lt;/h2&gt;
+&lt;h2 id="todays-goal"&gt;Today’s Goal&lt;/h2&gt;
 &lt;p&gt;By the end of today, you will:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Understand how Python stores data in memory&lt;/li&gt;
-&lt;li&gt;Learn &lt;strong&gt;references vs values&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Understand &lt;strong&gt;mutability&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Learn references vs values&lt;/li&gt;
+&lt;li&gt;Understand mutability&lt;/li&gt;
 &lt;li&gt;Avoid hidden bugs&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
@@ -18,15 +18,20 @@ you are already misunderstanding Python.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You think:&lt;/p&gt;
-&lt;p&gt;&amp;ldquo;x and y both store 10&amp;rdquo;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;x and y both store 10&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;Wrong.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="what-actually-happens"&gt;What Actually Happens&lt;/h2&gt;
-&lt;p&gt;Memory: [10] ← object&lt;/p&gt;
-&lt;p&gt;x ─────┐&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; ├──→ [10]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;y ─────┘&lt;/p&gt;</description></item><item><title>Day 1: Python Is Not Running Your Code (Execution Model Deep Dive)</title><link>https://dailypytips.com/posts/day1/</link><pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate><guid>https://dailypytips.com/posts/day1/</guid><description>&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Memory:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;[10] ← object
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;x ─────┐
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ├──→ [10]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;y ─────┘
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Variables do not store values.
+They store references to objects.&lt;/p&gt;</description></item><item><title>Day 1: Python Is Not Running Your Code (Execution Model Deep Dive)</title><link>https://dailypytips.com/posts/day1/</link><pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate><guid>https://dailypytips.com/posts/day1/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;You write Python.&lt;br&gt;
 But Python is not executing your code the way you think.&lt;/p&gt;
 &lt;/blockquote&gt;
