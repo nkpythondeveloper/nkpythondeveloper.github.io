@@ -1,4 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Python on DailyPyTips</title><link>https://dailypytips.com/tags/python/</link><description>Recent content in Python on DailyPyTips</description><generator>Hugo -- 0.160.1</generator><language>en-us</language><lastBuildDate>Fri, 24 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://dailypytips.com/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>Day 2: Variables Don't Store Values (Python Memory Model)</title><link>https://dailypytips.com/posts/day2/</link><pubDate>Fri, 24 Apr 2026 00:00:00 +0000</pubDate><guid>https://dailypytips.com/posts/day2/</guid><description>&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Python on DailyPyTips</title><link>https://dailypytips.com/tags/python/</link><description>Recent content in Python on DailyPyTips</description><generator>Hugo -- 0.160.1</generator><language>en-us</language><lastBuildDate>Sat, 25 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://dailypytips.com/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>Day 3: Your Data Structures Are Not What You Think (Lists, Tuples, Sets Internals)</title><link>https://dailypytips.com/posts/day3/</link><pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate><guid>https://dailypytips.com/posts/day3/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;You think a list is just a collection of items.
+It is not.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It is a memory-managed structure with real trade-offs.&lt;/p&gt;
+&lt;p&gt;Today, you stop using data structures blindly.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="todays-goal"&gt;Today’s Goal&lt;/h2&gt;
+&lt;p&gt;By the end of today, you will:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Understand how lists, tuples, and sets work internally&lt;/li&gt;
+&lt;li&gt;Learn time and space complexity&lt;/li&gt;
+&lt;li&gt;Choose the right structure based on behavior and cost&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="the-illusion"&gt;The Illusion&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You think this stores values.&lt;/p&gt;
+&lt;p&gt;Reality:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;[ ptr | ptr | ptr ] -&amp;gt; references to objects
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A list stores references, not values.&lt;/p&gt;</description></item><item><title>Day 2: Variables Don't Store Values (Python Memory Model)</title><link>https://dailypytips.com/posts/day2/</link><pubDate>Fri, 24 Apr 2026 00:00:00 +0000</pubDate><guid>https://dailypytips.com/posts/day2/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;If you think &lt;code&gt;x = 10&lt;/code&gt; means &amp;ldquo;x stores 10&amp;rdquo;&amp;hellip;
 you are already misunderstanding Python.&lt;/p&gt;
 &lt;/blockquote&gt;
