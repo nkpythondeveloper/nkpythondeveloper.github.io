@@ -32,8 +32,11 @@ That’s only half the story.&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Dictionary does NOT scan all keys.
 It jumps directly using hash.&lt;/p&gt;</description></item><item><title>How Support Engineers Actually Solve Production Issues (L1 → L2 → L3 Deep Dive)</title><link>https://dailypytips.com/posts/support_lifecycle/</link><pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate><guid>https://dailypytips.com/posts/support_lifecycle/</guid><description>&lt;p&gt;Most engineers think support is about “fixing tickets.” It isn’t.&lt;/p&gt;
 &lt;p&gt;Support engineering is a &lt;strong&gt;real-time decision system operating under uncertainty&lt;/strong&gt;, where engineers continuously observe signals, form hypotheses, test them, and take action.&lt;/p&gt;
-&lt;p&gt;If you&amp;rsquo;re building automation, agents, or digital twins for support — you must first understand how this process works manually.&lt;/p&gt;
-&lt;p&gt;This post walks through the &lt;strong&gt;actual end-to-end workflow&lt;/strong&gt; followed by L1, L2, and L3 support engineers in real production systems — with real thinking patterns, not just steps.&lt;/p&gt;</description></item><item><title>Day 3: Your Data Structures Are Not What You Think (Lists, Tuples, Sets Internals)</title><link>https://dailypytips.com/posts/day3/</link><pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate><guid>https://dailypytips.com/posts/day3/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;This post walks through the &lt;strong&gt;actual end-to-end workflow&lt;/strong&gt; followed by L1, L2, and L3 support engineers in real production systems — with real thinking patterns, not just steps.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="the-big-picture-high-level-flow"&gt;The Big Picture (High-Level Flow)&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="End-to-End Support Workflow" loading="lazy" src="https://dailypytips.com/images/support_workflow.png"&gt;&lt;/p&gt;
+&lt;p&gt;Every incident flows through a common lifecycle:&lt;/p&gt;</description></item><item><title>Day 3: Your Data Structures Are Not What You Think (Lists, Tuples, Sets Internals)</title><link>https://dailypytips.com/posts/day3/</link><pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate><guid>https://dailypytips.com/posts/day3/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;You think a list is just a collection of items.
 It is not.&lt;/p&gt;
 &lt;/blockquote&gt;
