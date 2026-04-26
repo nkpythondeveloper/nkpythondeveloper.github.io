@@ -1,4 +1,36 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Internals on DailyPyTips</title><link>https://dailypytips.com/tags/internals/</link><description>Recent content in Internals on DailyPyTips</description><generator>Hugo -- 0.160.1</generator><language>en-us</language><lastBuildDate>Sat, 25 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://dailypytips.com/tags/internals/index.xml" rel="self" type="application/rss+xml"/><item><title>Day 3: Your Data Structures Are Not What You Think (Lists, Tuples, Sets Internals)</title><link>https://dailypytips.com/posts/day3/</link><pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate><guid>https://dailypytips.com/posts/day3/</guid><description>&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Internals on DailyPyTips</title><link>https://dailypytips.com/tags/internals/</link><description>Recent content in Internals on DailyPyTips</description><generator>Hugo -- 0.160.1</generator><language>en-us</language><lastBuildDate>Sun, 26 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://dailypytips.com/tags/internals/index.xml" rel="self" type="application/rss+xml"/><item><title>Day 4: Dictionaries Are Magic (Until They Aren’t) — Hashing &amp; Collisions</title><link>https://dailypytips.com/posts/day4/</link><pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate><guid>https://dailypytips.com/posts/day4/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;You think dictionary lookup is always O(1).
+That’s only half the story.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Today, you understand how dictionaries actually work.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="todays-goal"&gt;Today’s Goal&lt;/h2&gt;
+&lt;p&gt;By the end of today, you will:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Understand how dictionaries store data&lt;/li&gt;
+&lt;li&gt;Learn how hashing works&lt;/li&gt;
+&lt;li&gt;Understand collisions and their impact&lt;/li&gt;
+&lt;li&gt;Know when O(1) breaks down&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="the-illusion"&gt;The Illusion&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;user&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;John&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;age&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You think:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is just key-value storage&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Reality:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is a highly optimized hash table&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="dictionary-internal-model"&gt;Dictionary Internal Model&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;key -&amp;gt; hash(key) -&amp;gt; index -&amp;gt; slot -&amp;gt; value
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Dictionary does NOT scan all keys.
+It jumps directly using hash.&lt;/p&gt;</description></item><item><title>Day 3: Your Data Structures Are Not What You Think (Lists, Tuples, Sets Internals)</title><link>https://dailypytips.com/posts/day3/</link><pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate><guid>https://dailypytips.com/posts/day3/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;You think a list is just a collection of items.
 It is not.&lt;/p&gt;
 &lt;/blockquote&gt;
