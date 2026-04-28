@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Modules on DailyPyTips</title><link>https://dailypytips.com/tags/modules/</link><description>Recent content in Modules on DailyPyTips</description><generator>Hugo -- 0.160.1</generator><language>en-us</language><lastBuildDate>Tue, 28 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://dailypytips.com/tags/modules/index.xml" rel="self" type="application/rss+xml"/><item><title>Day 6: Imports Are Not Just Includes — Module System &amp; Execution</title><link>https://dailypytips.com/posts/day6/</link><pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate><guid>https://dailypytips.com/posts/day6/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;You think &lt;code&gt;import&lt;/code&gt; just brings code into your file.
+It does much more than that.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Today, you understand how Python loads, initializes, and caches modules.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="todays-goal"&gt;Today’s Goal&lt;/h2&gt;
+&lt;p&gt;By the end of today, you will:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Understand how Python resolves imports&lt;/li&gt;
+&lt;li&gt;Learn module execution model&lt;/li&gt;
+&lt;li&gt;Understand import caching&lt;/li&gt;
+&lt;li&gt;Avoid common import pitfalls&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="the-illusion"&gt;The Illusion&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;math&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You think:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Python just loads math&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Reality:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Python searches, loads, compiles (if needed), executes, and caches the module&lt;/p&gt;</description></item></channel></rss>
