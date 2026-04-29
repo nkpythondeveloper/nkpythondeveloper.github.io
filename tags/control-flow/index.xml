@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Control-Flow on DailyPyTips</title><link>https://dailypytips.com/tags/control-flow/</link><description>Recent content in Control-Flow on DailyPyTips</description><generator>Hugo -- 0.161.0</generator><language>en-us</language><lastBuildDate>Wed, 29 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://dailypytips.com/tags/control-flow/index.xml" rel="self" type="application/rss+xml"/><item><title>Day 7: Errors Are Not Failures — Exception Handling &amp; Control Flow</title><link>https://dailypytips.com/posts/day7/</link><pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate><guid>https://dailypytips.com/posts/day7/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;You think errors stop your program.
+In Python, they are part of control flow.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Today, you understand how Python handles errors under the hood.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="todays-goal"&gt;Today’s Goal&lt;/h2&gt;
+&lt;p&gt;By the end of today, you will:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Understand how exceptions work internally&lt;/li&gt;
+&lt;li&gt;Learn stack unwinding&lt;/li&gt;
+&lt;li&gt;Use exceptions correctly (and not overuse them)&lt;/li&gt;
+&lt;li&gt;Understand performance implications&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="the-illusion"&gt;The Illusion&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;abc&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You think:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Program crashes&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Reality:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Python raises an exception object and unwinds the stack&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="what-is-an-exception"&gt;What Is an Exception?&lt;/h2&gt;
+&lt;p&gt;An exception is:&lt;/p&gt;</description></item></channel></rss>
