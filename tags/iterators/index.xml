@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Iterators on DailyPyTips</title><link>https://dailypytips.com/tags/iterators/</link><description>Recent content in Iterators on DailyPyTips</description><generator>Hugo -- 0.161.1</generator><language>en-us</language><lastBuildDate>Thu, 30 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://dailypytips.com/tags/iterators/index.xml" rel="self" type="application/rss+xml"/><item><title>Day 8: Stop Creating Lists — Iterators &amp; Generators (Lazy Execution)</title><link>https://dailypytips.com/posts/day8/</link><pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate><guid>https://dailypytips.com/posts/day8/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;You think Python processes everything immediately.
+It doesn’t.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Python can be lazy.&lt;/p&gt;
+&lt;p&gt;Today, you understand how iteration really works under the hood.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="todays-goal"&gt;Today’s Goal&lt;/h2&gt;
+&lt;p&gt;By the end of today, you will:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Understand iterator protocol&lt;/li&gt;
+&lt;li&gt;Learn how generators work internally&lt;/li&gt;
+&lt;li&gt;See how lazy execution saves memory&lt;/li&gt;
+&lt;li&gt;Avoid unnecessary allocations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="the-illusion"&gt;The Illusion&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You think:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Python loops over the list directly&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Reality:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Python asks for an iterator and pulls values one by one&lt;/p&gt;</description></item></channel></rss>
