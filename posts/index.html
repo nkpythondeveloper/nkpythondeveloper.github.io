@@ -14,7 +14,14 @@ Understand how Python executes your code Learn what happens between .py to execu
 x = 10 y = x + 5 print(y) You assume:
 Python reads this line by line and runs it
 That assumption is wrong.
-...</p></div><footer class=entry-footer><span title='2026-04-23 00:00:00 +0000 UTC'>April 23, 2026</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Nitin S Kulkarni</span></footer><a class=entry-link aria-label="post link to Python Day 1: Python Is Not Running Your Code (Execution Model Deep Dive)" href=https://dailypytips.com/posts/day1/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>Python Day 2: Variables Don't Store Values (Python Memory Model)</h2></header><div class=entry-content><p>If you think x = 10 means “x stores 10”… you are already misunderstanding Python.
+...</p></div><footer class=entry-footer><span title='2026-04-23 00:00:00 +0000 UTC'>April 23, 2026</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Nitin S Kulkarni</span></footer><a class=entry-link aria-label="post link to Python Day 1: Python Is Not Running Your Code (Execution Model Deep Dive)" href=https://dailypytips.com/posts/day1/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>FastAPI Day 2: ASGI Changed Everything — Understanding Event Loops & Concurrent Requests</h2></header><div class=entry-content><p>Day 2: ASGI Changed Everything — Understanding Event Loops & Concurrent Requests Most developers learn async backwards.
+They start with:
+async def hello(): without understanding:
+what problem async solves why event loops exist what concurrency actually means FastAPI only makes sense once you understand the engine underneath it.
+And that engine is ASGI.
+The Real Problem Was Never Speed This is the first mental model to fix.
+Async is not primarily about making your code execute faster.
+...</p></div><footer class=entry-footer><span title='2026-05-08 00:00:00 +0000 UTC'>May 8, 2026</span>&nbsp;·&nbsp;<span>4 min</span>&nbsp;·&nbsp;<span>Nitin S Kulkarni</span></footer><a class=entry-link aria-label="post link to FastAPI Day 2: ASGI Changed Everything — Understanding Event Loops & Concurrent Requests" href=https://dailypytips.com/posts/fastapi_day2/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>Python Day 2: Variables Don't Store Values (Python Memory Model)</h2></header><div class=entry-content><p>If you think x = 10 means “x stores 10”… you are already misunderstanding Python.
 Today, we fix that.
 Today’s Goal By the end of today, you will:
 Understand how Python stores data in memory Learn references vs values Understand mutability Avoid hidden bugs The Illusion You write:
@@ -67,15 +74,7 @@ Understand iterator protocol Learn how generators work internally See how lazy e
 Python loops over the list directly
 Reality:
 Python asks for an iterator and pulls values one by one
-...</p></div><footer class=entry-footer><span title='2026-04-30 00:00:00 +0000 UTC'>April 30, 2026</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Nitin S Kulkarni</span></footer><a class=entry-link aria-label="post link to Python Day 8: Stop Creating Lists — Iterators & Generators (Lazy Execution)" href=https://dailypytips.com/posts/day8/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>Python Day 9: Your Functions Can Be Rewritten — Decorators & Runtime Behavior</h2></header><div class=entry-content><p>You think a function is fixed once defined. It is not.
-In Python, functions are objects—and can be modified at runtime.
-Today, you understand how decorators actually work under the hood.
-Today’s Goal By the end of today, you will:
-Understand how decorators work internally Learn function wrapping Understand closures Use decorators for real-world patterns The Illusion def greet(): print("hello") You think:
-greet is just a function
-Reality:
-greet is an object that can be passed, modified, and replaced
-...</p></div><footer class=entry-footer><span title='2026-05-01 00:00:00 +0000 UTC'>May 1, 2026</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Nitin S Kulkarni</span></footer><a class=entry-link aria-label="post link to Python Day 9: Your Functions Can Be Rewritten — Decorators & Runtime Behavior" href=https://dailypytips.com/posts/day9/></a></article><footer class=page-footer><nav class=pagination><a class=next href=https://dailypytips.com/posts/page/2/>Next&nbsp;&nbsp;»</a></nav></footer></main><footer class=footer><span>&copy; 2026 <a href=https://dailypytips.com/>DailyPyTips</a></span> ·
+...</p></div><footer class=entry-footer><span title='2026-04-30 00:00:00 +0000 UTC'>April 30, 2026</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Nitin S Kulkarni</span></footer><a class=entry-link aria-label="post link to Python Day 8: Stop Creating Lists — Iterators & Generators (Lazy Execution)" href=https://dailypytips.com/posts/day8/></a></article><footer class=page-footer><nav class=pagination><a class=next href=https://dailypytips.com/posts/page/2/>Next&nbsp;&nbsp;»</a></nav></footer></main><footer class=footer><span>&copy; 2026 <a href=https://dailypytips.com/>DailyPyTips</a></span> ·
 <span>Powered by
 <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
 <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
